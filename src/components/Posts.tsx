@@ -11,7 +11,6 @@ const Post = () => {
   const result: FInterface = useFetch(url);
   const buttonRef = useRef<any>({});
   const [posts, setPosts] = useState<PInterface[]>([]);
-  // const [loading, setLoading] = useState<boolean>(false);
   const [page, setPage] = useState<number>(1);
 
   const fetchPosts = async () => {
@@ -42,7 +41,6 @@ const Post = () => {
       buttonRef.current.click();
     }
   };
-  console.log(posts);
 
   useEffect(() => {
     fetchPosts();
